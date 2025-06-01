@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Snack Smarter</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo-link"><img class="logo" src="logo.png" alt="Snacks Logo"></a>
+            <ul class="links" id="mainNav">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Products</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="dropdownMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <ul class="dropdown" id="dropdownMenu" aria-label="Mobile navigation">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Products</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </header>
+    <main class="main-content">
+        <section class="hero">
+            <h1>Snack Smarter, Live Better!</h1>
+            <p>
+                Fuel your day with our delicious, wholesome snacks that nourish both body and mind. Packed with natural ingredients, our snacks are the perfect balance of taste and nutrition designed to keep you energized, satisfied, and guilt-free. Whether you're on the go or winding down, choose from our wide variety of snacks, all free from artificial additives. Healthy eating has never been this easy or tasty!
+            </p>
+            <a class="btn" href="#">View Products</a>
+        </section>
+    </main>
+    <footer class="footer-section">
+        <div class="footer-content">
+            <h3>Follow us on:</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">@instagram</a></li>
+                <li><a href="#" class="footer-link">@twitter</a></li>
+                <li><a href="#" class="footer-link">@facebook</a></li>
+            </ul>
+            <h4>Made with <span aria-label="love">&#x2665;&#xfe0f;</span></h4>
+        </div>
+    </footer>
+    <script>
+        const toggleBtn = document.querySelector('.toggle');
+        const toggleBtnIcon = document.querySelector('.toggle i');
+        const dropDown = document.querySelector('.dropdown');
+        let isOpen = false;
+        toggleBtn.onclick = function() {
+            dropDown.classList.toggle('open');
+            isOpen = !isOpen;
+            toggleBtn.setAttribute('aria-expanded', isOpen);
+            toggleBtnIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+</body>
+</html>
